@@ -23,20 +23,20 @@ RSpec.describe 'valid_ipv4' do
   end
 
   it 'returns false for invalid IPv4 addresses' do
-    expect(valid_ipv4('256.100.50.25')).to be false  # 256 is out of range
-    expect(valid_ipv4('192.168.1')).to be false      # Not enough octets
-    expect(valid_ipv4('192.168.1.300')).to be false  # 300 is out of range
-    expect(valid_ipv4('192.168.1.-1')).to be false    # Negative number
-    expect(valid_ipv4('192.168.1.1.1')).to be false   # Too many octets
-    expect(valid_ipv4('hello.world')).to be false     # Not a number
-    expect(valid_ipv4('')).to be false                 # Empty string
-    expect(valid_ipv4('  192.168.1.1  ')).to be true   # Whitespace around the address
+    expect(valid_ipv4('256.100.50.25')).to be false  
+    expect(valid_ipv4('192.168.1')).to be false   
+    expect(valid_ipv4('192.168.1.300')).to be false  
+    expect(valid_ipv4('192.168.1.-1')).to be false   
+    expect(valid_ipv4('192.168.1.1.1')).to be false   
+    expect(valid_ipv4('hello.world')).to be false     
+    expect(valid_ipv4('')).to be false                 
+    expect(valid_ipv4('  192.168.1.1  ')).to be true   
   end
 
   it 'handles edge cases' do
-    expect(valid_ipv4('01.02.03.04')).to be false      # Leading zeros
-    expect(valid_ipv4('192.168.0.256')).to be false     # 256 is out of range
-    expect(valid_ipv4('192.168.0.0.0')).to be false     # Too many octets
-    expect(valid_ipv4('192.168.0.-1')).to be false      # Negative number
+    expect(valid_ipv4('01.02.03.04')).to be false      
+    expect(valid_ipv4('192.168.0.256')).to be false    
+    expect(valid_ipv4('192.168.0.0.0')).to be false     
+    expect(valid_ipv4('192.168.0.-1')).to be false
   end
 end
