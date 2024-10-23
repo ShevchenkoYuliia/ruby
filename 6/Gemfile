@@ -1,0 +1,3 @@
+source "https://github.com/ShevchenkoYuliia/ruby/tree/main/gem/even_filter"
+
+gem "even_filter", path: "../gem/even_filter"

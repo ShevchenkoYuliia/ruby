@@ -1,0 +1,17 @@
+PATH
+  remote: ../gem/even_filter
+  specs:
+    even_filter (0.1.0)
+
+GEM
+  remote: https://github.com/ShevchenkoYuliia/ruby/tree/main/gem/even_filter/
+  specs:
+
+PLATFORMS
+  x64-mingw-ucrt
+
+DEPENDENCIES
+  even_filter!
+
+BUNDLED WITH
+   2.5.22
