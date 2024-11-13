@@ -5,6 +5,10 @@ def reverse_polish_notation(line)
   precedence = { '+' => 1, '-' => 1, '*' => 2, '/' => 2, '^' => 3 }
 
   symbols = line.scan(/-?\d+\.?\d*|\+|\-|\*|\/|\^|\(|\)/)
+  if symbols.last && precedence.keys.include?(symbols.last)
+    puts "Error: Expression ends with an operator (#{symbols.last})."
+    return
+  end
 
   symbols.each do |symbol|
     if symbol =~ /^-?\d+\.?\d*$/
@@ -71,8 +75,18 @@ def evaluate_rpn(rpn)
 
   if stack.size != 1
     puts "Error: Invalid expression."
+  else
+    puts "Evaluation result -> #{stack.pop}"
+  end
 end
-
-puts "input -> "
-entered_line = gets.chomp  
-reverse_polish_notation(entered_line)
+expressions = [
+  "-2 + 4",
+  "3-5+",
+  "1/0",
+  "3.4+5.9",
+  "4-5+(-4 +5)"
+]
+expressions.each do |expression|
+  puts "\nProcessing: #{expression}"
+  reverse_polish_notation(expression)
+end
