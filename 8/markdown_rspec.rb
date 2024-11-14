@@ -1,3 +1,4 @@
+require_relative 'markdown'
 describe 'convert_to_markdown' do
   before(:each) do
     @input_file = 'test_input.txt'
