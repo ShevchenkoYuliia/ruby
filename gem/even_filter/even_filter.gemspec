@@ -6,19 +6,19 @@ Gem::Specification.new do |spec|
   spec.name = "even_filter"
   spec.version = EvenFilter::VERSION
   spec.authors = ["Yuliia"]
-  spec.email = ["yuliia.shevchenko1845@gmail.com"]
+  spec.email = ["yuliia.shevchenko@student.karazin.ua"]
 
-  spec.summary = " Write a short summary, because RubyGems requires one."
+  spec.summary = "A Ruby gem for filtering even numbers in an array."
   spec.description = " Write a longer description or delete this line."
   spec.homepage = "https://github.com/ShevchenkoYuliia/ruby/gem/even_filter"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
-  spec.metadata["allowed_push_host"] = " Set to your gem server 'https://example.com'"
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/ShevchenkoYuliia/ruby/gem/even_filter"
-  spec.metadata["changelog_uri"] = "https://github.com/ShevchenkoYuliia/ruby/gem/even_filter/CHANGELOG.md"
+  #spec.metadata["homepage_uri"] = spec.homepage
+  #spec.metadata["source_code_uri"] = "https://github.com/ShevchenkoYuliia/ruby/gem/even_filter"
+  #spec.metadata["changelog_uri"] = "https://github.com/ShevchenkoYuliia/ruby/gem/even_filter/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
