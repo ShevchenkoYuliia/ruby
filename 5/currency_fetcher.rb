@@ -14,7 +14,6 @@ data = JSON.parse(response)
 if data['result'] == 'success'
   rates = data['conversion_rates']
   
-  # Збереження даних у CSV файл
   CSV.open('exchange_rates.csv', 'wb') do |csv|
     csv << ['Currency', 'Rate'] 
     rates.each do |currency, rate|
